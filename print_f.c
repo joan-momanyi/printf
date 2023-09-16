@@ -1,7 +1,11 @@
 #include "main.h"
 #include <unistd.h>
 #include <string.h>
-
+/**
+ * _printf - is a function that selects the correct function to print.
+ * @format: identifier to look for.
+ * Return: the length of the string.
+ */
 int _printf(const char *format, ...);
 {
 	int char_print = 0;
@@ -24,7 +28,7 @@ int _printf(const char *format, ...);
 			format ++;
 			if (*format == '\0')
 				break;
-
+		
 			if (*format == '%')
 			{
 				write(1, format, 1);
